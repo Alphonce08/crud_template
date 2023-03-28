@@ -13,7 +13,7 @@ def insertData(request):
         gender = request.POST.get('gender')
 
 
-        query = People(name = name, email = email, age = age, gender = gender)
+        query = People(name = name, email = email, idnum=idnum, age = age, gender = gender)
         query.save()
         return redirect("/")
 
@@ -23,3 +23,16 @@ def index(request):
     data = People.objects.all()
     context = {"data": data}
     return render(request, "index.html", context)
+
+def deleteData(request, id):
+    d = People.objects.get(id=id)
+    d.delete()
+    return redirect("/")
+    return render(request, "index.html")
+
+
+def updateData(request, id):
+    d = People.objects.get(id=id)
+    d.update()
+    return redirect("/")
+    return render(request, "update.html")

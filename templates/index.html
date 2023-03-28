@@ -34,7 +34,7 @@
                     </div>
                     <div class="form-group">
                         <input type="number" class="form-control  mt-2" placeholder="ID Number" name="idnum" required>
-                    </div
+                    </div>
 
                     <div class="form-group">
                         <input type="number" class="form-control  mt-2" placeholder="Age" name="age" required>
@@ -50,11 +50,23 @@
             </div>
 
 
+ <body>
+    <h4>update record</h4>
+<form action="updaterecord/{{ name.id }}" method="post">
+    Name of school:<br>
+    <input type="first" value=" "><br>
+
+    location:<br>
+<input name="last" value=""><br>
+
+
+</form>
+</body>
+
                     <div class="d-grid gap-2">
 
                         <button class="btn btn-success mt-2" type="submit">Insert</button>
                     </div>
-
 
 
                 </form>
@@ -70,9 +82,11 @@
                         <th scope="col">Age</th>
                         <th scope="col">Gender</th>
                           <th scope="col">ID number</th>
-                          <th scope="col">Pay</th>
+
                         <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
+                          <th scope="col">Delete</th>
+
+
 
                       </tr>
                     </thead>
@@ -84,10 +98,11 @@
                         <th scope="row">{{d.id}}</th>
                         <td>{{d.name}}</td>
                         <td>{{d.email}}</td>
+                          <td>{{d.idnum}}</td>
                         <td>{{d.age}}</td>
                         <td>{{d.gender}}</td>
                           <form action="">
-                                <td><input name="phone" type="text" value="{{d.num}}"></td>
+                                <td><input name="phone" type="text" value="{{id.num}}"></td>
 
 
                           </form>
