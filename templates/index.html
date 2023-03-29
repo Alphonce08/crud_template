@@ -50,19 +50,6 @@
             </div>
 
 
- <body>
-    <h4>update record</h4>
-<form action="updaterecord/{{ name.id }}" method="post">
-    Name of school:<br>
-    <input type="first" value=" "><br>
-
-    location:<br>
-<input name="last" value=""><br>
-
-
-</form>
-</body>
-
                     <div class="d-grid gap-2">
 
                         <button class="btn btn-success mt-2" type="submit">Insert</button>
@@ -79,14 +66,13 @@
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
+                        <th scope="col">ID number</th>
                         <th scope="col">Age</th>
                         <th scope="col">Gender</th>
-                          <th scope="col">ID number</th>
 
                         <th scope="col">Edit</th>
-                          <th scope="col">Delete</th>
 
-
+                       <th scope="col">Delete</th>
 
                       </tr>
                     </thead>
@@ -101,12 +87,9 @@
                           <td>{{d.idnum}}</td>
                         <td>{{d.age}}</td>
                         <td>{{d.gender}}</td>
-                          <form action="">
-                                <td><input name="phone" type="text" value="{{id.num}}"></td>
 
-
-                          </form>
                          <td><a href="/update/{{d.id}}" type="button" class="btn btn-outline-warning">Edit</a></td>
+
                         <td><a href="/delete/{{d.id}}" type="button" class="btn btn-outline-danger">Delete</a></td>
 
                        </tr>
